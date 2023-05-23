@@ -11,7 +11,7 @@ let secondCard = undefined;
 const updateTime = () => {
     time++;
     $("#timer").text(time);
-    if (time >= 17) {
+    if (time >= 60) {
         clearInterval(timerInterval);
         alert("Took too long! Game over");
     }
