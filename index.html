@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+ 
+    <header>
+        <div class="dropdown m-3">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="difficulty" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select Difficulty
+            </button>
+            <div class="dropdown-menu" aria-labelledby="difficulty">
+              <label class="dropdown-item">
+                <input type="radio" value="easy" name="options" id="option1" autocomplete="off" checked> Easy
+              </label>
+              <label class="dropdown-item">
+                <input type="radio" value="medium" name="options" id="option2" autocomplete="off"> Medium
+              </label>
+              <label class="dropdown-item">
+                <input type="radio" value="hard" name="options" id="option3" autocomplete="off"> Hard
+              </label>
+            </div>
+          </div>
+          <div>
+            <section id="info" style="display: none;">
+                <h1>Pairs: <span id="total"></span></h1>
+                <h1>Matches Played: <span id="matches"></span></h1>
+                <h1>Pairs Remaining: <span id="left"></span></h1>
+                <h1>Clicks: <span id="clicks"></span></h1>
+                <h1> <span id="timer"> </span> seconds</h1>
+              </section>
+            </div>
+ 
+          <a href="./index.html"><button class="btn btn-danger">Reset</button></a>
+          <button class="btn btn-success" id="start">Start</button>
+    </header>
+    <div id="game_grid" style="display: none;">
+    </div>
+
+
+    <section id="themes"  style="display: none;">
+        <button id="Powerup" class="btn btn-danger"> Power Up</button>
+        <br> <br>
+      <button id="Light" class="btn btn-light"> Light Mode</button>
+      <button id="Dark" class="btn btn-dark"> Dark Mode</button>
+     
+  </section>
+  
+  
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+      $("#start").click(function() {
+        $(this).hide();
+        $("#info").show();
+        $("#game_grid").show();
+        $("#themes").show();
+      });
+  
+      $("a").click(function() {
+        $("#start").show();
+        $("#info").hide();
+        $("#game_grid").hide();
+        $("#themes").hide();
+      });
+    });
+  </script>
